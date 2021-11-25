@@ -1,0 +1,21 @@
+//important  for future, function have to come before variable for color changes
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+$custom-theme-colors: (
+"storm": #565C5E,
+"forestgreen": #455954,
+"leather": #9D7463,
+"blue": #B5C2C7,
+"linen": #DFDBD8
+);
+
+//new bootstrap5.1^ requires maploop and merge
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+
+//importing boostrap
+@import "../node_modules/bootstrap/scss/bootstrap"; 

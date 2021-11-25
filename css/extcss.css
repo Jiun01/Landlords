@@ -1,0 +1,25 @@
+/* overrides */
+
+.wrapper{
+    min-height:100%;
+    min-width:100%;
+    position:absolute;
+}
+footer {
+    position: absolute;
+    bottom:0;
+    min-width:100%;
+}
+
+.scroll {
+    height: 255px;
+    overflow-y: auto;
+}
+
+.dashboard{
+  height:120px !important;
+}
+
+.index-listings{
+  height:400px !important;
+}
